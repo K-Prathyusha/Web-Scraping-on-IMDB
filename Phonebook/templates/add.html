@@ -1,0 +1,32 @@
+{% extends 'home.html' %}
+
+{% block output %}
+ <form action="{{ url_for('home') }}" method="post">
+<!-- <center>
+   <h3>Create Contact</h3>
+   Name :<input type="text" name="Name" placeholder="enter name"><br><br>
+   Mobile No.:<input type="text" name="phone" placeholder="enter mobile no."><br><br>
+   <input type="submit" value="submit">
+</center> -->
+<center>
+<table>
+  <tr>
+    <td>Name :</td>
+    <td><input type="text" name="Name" placeholder="enter name"></td><br>
+  </tr>
+<br>
+  <tr>
+    <td>Mobile No.:</td>
+    <td><input type="text" name="phone" placeholder="enter mobile no."></td><br>
+  </tr>
+<br>
+  <tr>
+    <td></td>
+    <td><input type="submit" value="submit"></td>
+  </tr>
+</table>
+
+</center>
+
+ </form>
+ {% endblock %}

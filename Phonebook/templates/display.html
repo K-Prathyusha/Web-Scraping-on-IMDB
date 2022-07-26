@@ -1,0 +1,30 @@
+{%  extends 'home.html'%}
+
+
+{% block output %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <!-- <img src="user2.jpg" width="30%" height="40%"> -->
+      <center>
+        <h3></h3>
+        <table  border="2"<style media="screen">
+          <tr>
+            <td>Name</td>
+            <td>mobile</td>
+          </tr>
+
+            {% for i,j in database.items() %}
+            <tr>
+              <td>{{i}}</td>
+              <td>{{j}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+      </center>
+    </body>
+</html>
+{% endblock %}

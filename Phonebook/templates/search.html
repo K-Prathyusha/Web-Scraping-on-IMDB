@@ -1,0 +1,19 @@
+
+{%  extends 'home.html'%}
+
+{% block output %}
+<center>
+<form action="{{ url_for('search') }}" method="post">
+
+  <h3> </h3>
+  Enter a Name :<input type="text" name="se" value=""><br><br>
+  <input type="submit" value="submit">
+</form>
+{% for i,j in database.items() %}
+  {% if search==i %}
+    <h1>Name : {{search}}</h1>
+    <h1>Number : {{j}}</h1>
+  {% endif %}
+{% endfor %}
+</center>
+{% endblock %}
